@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>下载她她</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	</head>
+	<style>
+		body{
+			width:100%;
+			height: 100%;
+			background:url(img/download_bg.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.download{
+			position: absolute;
+			top: 37%;
+			width: 72%;
+			left:50%;
+			margin-left: -36%;
+		}
+	</style>
+	<body>
+		 <img src="img/download.png" class="download" id="download" />
+	</body>
+</html>
+<script>
+	//封装$$
+	function $$(id){
+		return document.getElementById(id);
+	}
+
+  	setTimeout(function(){  
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';  
+    },20);
+    
+    /*ios下载路径*/
+    var linkToSrc="http://a.app.qq.com/o/simple.jsp?pkgname=com.lestata.tata";
+     
+    var u = navigator.userAgent;
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 alert('是否是Android：'+isAndroid); alert('是否是iOS：'+isiOS);
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端 
+     
+     /*and下载路径*/
+     if(isAndroid){
+		linkToSrc='http://www.lestata.com/download/Android?apk=app-SoGouSearch-release';
+	}
+    
+    $$("download").addEventListener('touchstart',function(){
+     	this.src="img/download_active.png";     
+     });
+    
+     $$("download").addEventListener('touchend',function(){
+     	this.src="img/download.png"; 
+     	window.location.href=linkToSrc;
+     });
+</script>

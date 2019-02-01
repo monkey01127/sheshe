@@ -1,0 +1,39 @@
+{
+	"status": 0,
+	"error": "",
+	"data": {
+		"title": {
+			"text": "我是象形图",
+			"subtext": "象形图副标题",
+			"source": "基数: 所有被访者 n=400 \n\n数据来源：B12"
+		},
+		"legend": {
+				"data": []
+		},
+		"xAxis": {
+			"data": []
+		},
+		"yAxis": {
+			"data": [
+				"喜欢",
+				"不喜欢",
+				"无所谓"
+			]
+		},
+		"data": {
+			"series": {
+				"data": [{
+					"value":230,
+					"percent":50
+				},
+					{
+					"value":400,
+					"percent":10
+				},{
+					"value":37,
+					"percent":40
+				}]
+			}
+		}
+	}
+}

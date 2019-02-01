@@ -1,0 +1,40 @@
+{
+	"status": "0",
+	"error": "",
+	"data": {
+		"yAxis": {
+			"data": [
+				"贬损者",
+				"被动者",
+				"推荐者"
+			]
+		},
+		"xAxis": {
+			"data": []
+		},
+		"data": {
+			"series": {
+				"data": [
+					{
+						"value": 10,
+						"percent": 12.40000009
+					}, {
+						"value": 20,
+						"percent": 25.00000001
+					}, {
+						"value": 50,
+						"percent": 62.5
+					}
+				]
+			}
+		},
+		"legend": {
+			"data": []
+		},
+		"title": {
+			"subtext": "象形图副标题",
+			"text": "我是象形图",
+			"source": "基数: 所有被访者 n=400 \n\n数据来源：B12"
+		}
+	}
+}

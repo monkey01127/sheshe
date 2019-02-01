@@ -1,0 +1,118 @@
+{
+	"status": "0",
+	"error": "",
+	"data": {
+		"title": {
+			"text": "我是柱形图和折线图的结合正标题",
+			"subtext": "我是柱形图和折线图的结合的负标题",
+			"source": "基数: 所有被访者 n=400 \n\n数据来源：B12"
+		},
+		"legend": {
+			"data": [
+				"当日完成样本量",
+				"累计完成样本量"
+			]
+		},
+		"yAxis": {
+			"max": 500
+		},
+		"xAxis": {
+			"data": [
+				"1月",
+				"2月",
+				"3月",
+				"4月",
+				"5月",
+				"6月",
+				"7月",
+				"8月",
+				"9月",
+				"10月",
+				"11月",
+				"12月"
+			]
+		},
+		"series": {
+			"data": {
+				"bar": [
+					{
+						"value": 17,
+						"percent": 80
+					}, {
+						"value": 5,
+						"percent": 80
+					}, {
+						"value": 17,
+						"percent": 80
+					}, {
+						"value": 27,
+						"percent": 80
+					}, {
+						"value": 37,
+						"percent": 80
+					}, {
+						"value": 47,
+						"percent": 50
+					}, {
+						"value": 57,
+						"percent": 30
+					}, {
+						"value": 67,
+						"percent": 50
+					}, {
+						"value": 77,
+						"percent": 30
+					}, {
+						"value": 87,
+						"percent": 60
+					}, {
+						"value": 97,
+						"percent": 30
+					}, {
+						"value": 87,
+						"percent": 60
+					}
+				],
+				"line": [
+					{
+						"value": 30,
+						"percent": 80
+					}, {
+						"value": 50,
+						"percent": 80
+					}, {
+						"value": 70,
+						"percent": 80
+					}, {
+						"value": 90,
+						"percent": 80
+					}, {
+						"value": 150,
+						"percent": 80
+					}, {
+						"value": 170,
+						"percent": 50
+					}, {
+						"value": 190,
+						"percent": 30
+					}, {
+						"value": 210,
+						"percent": 50
+					}, {
+						"value": 230,
+						"percent": 30
+					}, {
+						"value": 250,
+						"percent": 60
+					}, {
+						"value": 300,
+						"percent": 30
+					}, {
+						"value": 480,
+						"percent": 60
+					}
+				]
+			}
+		}
+	}
+}

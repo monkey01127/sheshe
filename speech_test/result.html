@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文测评--结果</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/result.css">
+		<style>
+			.wrap-box {
+				height: 21rem;
+			}
+			.wrap-result{
+				height: 0px;
+				overflow: hidden;
+				/*display: none;*/
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				/*min-height: 23rem;*/
+			}
+			.r-score,.wrap-result .r-txt,.wrap-result .arrow-list {
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/title_result.png"  class="win100 mAuto" />
+		<div class="wrap-box">
+			<div class="wrap-result mAuto">
+			<div class="arrow-list"></div>
+			<div class="r-txt">
+				<div class="describe">
+					<!--80到100之间-->
+					<dl class="level-one">
+						<dt class="fb">恭喜你！</dt>
+						<dd>您的英语口语非常棒！</dd>
+					</dl>
+					<!--60至79之间-->
+					<dl class="level-two">
+						<dt class="fb">加油！</dt>
+						<dd>就差一点了，别灰心！</dd>
+					</dl>
+					<!--0到59之间-->
+					<dl class="level-third">
+						<dt class="fb">加油！</dt>
+						<dd>想成功仍需努力，</dd>
+						<dd>机会是属于有准备的人的!</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="r-score"><span class="score">95</span>分</div>
+			
+		</div>
+		</div>
+		<div class="win60 mAuto wrap-btn"><img src="img/btn_lottery.png" onclick="to_lottery()"/></div>
+		<img src="img/gift_box.png" class="fixed-bottom" />
+		
+		<!--<form id="hostForm" method="post" enctype="multipart/form-data" >
+			<input type="file" name="voice" />
+			<input type="text" name="model" value="A"/>
+			<input type="text" name ="text"  value="Knowledge can change your fate and English can accomplish you fature" />
+			<div onclick="get_result()">
+				提交
+			</div>
+		</form>-->
+	</body>
+</html>
+<script src="js/common.js"></script>
+<script src="js/jquery-1.11.2.js "></script>
+<script src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script>
+	var score = getParams("score");
+	$(function(){
+		/*if(score < 86){
+			score = parseInt(score) + 10;
+		}*/
+		if(score == undefined){
+			score = 42;
+		}else{
+			score = parseInt(score);
+		}
+		
+		
+		$(".score").text(score);
+		
+		if(score>-1 && score<51){
+			$(".level-third").show();
+			$(".level-two,.level-one").hide();
+		}else if(score>50 && score<81){
+			$(".level-two").show();
+			$(".level-third,.level-one").hide();
+		}else if(score>80 && score<100){
+			$(".level-one").show();	
+			$(".level-two,.level-third").hide();
+		}else{
+			$(".level-one").show();	
+			$(".level-two,.level-one").hide();
+		}
+		
+		
+		setTimeout(function(){
+		/*	$('.wrap-result').addClass('animated');
+			$('.wrap-result').addClass('infinite');*/
+			//$('.wrap-result').addClass('slideInDown');
+			//$('.wrap-result').css('animation-name','moveDown');
+			//$('.wrap-result').css('-webkit-animation-name','moveDown');
+			/*$('#clock').css('-moz-animation-name','moveDown');
+			$('#clock').css('-o-animation-name','moveDown');*/
+			//$('.wrap-result').css('opacity',1);
+		/*	$(".wrap-result").slideDown();*/
+			//$(".wrap-result").animate({ height:0 },5000);
+		},1000);
+		
+		if(window.innerHeight>700){
+			setTimeout(function(){
+				if(score > 60 || score==60){
+					$(".wrap-result").animate({ height:19+'rem' },2000);
+				}else{
+					$(".wrap-result").animate({ height:22+'rem' },2000);
+				}
+			},500);
+		}else{
+			setTimeout(function(){
+				if(score > 60 || score==60){
+					$(".wrap-result").animate({ height:19+'rem' },2000);
+				}else{
+					$(".wrap-result").animate({ height:21+'rem' },2000);
+				}
+				
+			},500);
+		}
+		
+		
+	});
+	
+	function to_lottery(){
+		if(getCache('TYPE') == 'after'){
+			window.location.href = 'user_info.html';
+		}else{
+			window.location.href = 'lottery.html';
+		}
+	}
+	
+</script>

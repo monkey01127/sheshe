@@ -1,0 +1,23 @@
+.words ul li{
+	display: block;
+	width: 100%;
+	text-align: center;
+	letter-spacing: .5px;
+	line-height: 2.2rem;
+}
+#sucessTipWords{
+    text-align: left;
+    margin: 0 auto;
+}
+.header-bar .back{
+	display: block;
+    width: 40px;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.header-bar +.wrap-div{
+	margin-top: 44px;
+}
+.green {
+	color: #5dd9cb;
+}

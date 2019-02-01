@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文测评</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<!--<link rel="stylesheet" href="css/hej_index_demo.css">-->
+		<style>
+			.btn-list {
+				overflow: hidden;
+			}
+			/*body {
+				background: #fff;
+			}*/
+			.wrap-qrcode {
+				position: absolute;
+				width: 50%;
+				left: 25%;
+				margin-top: -25px;
+			}
+			.tips {
+				text-align: center;
+				padding-top: 100px;
+				font-size: 1.4rem;
+				margin-bottom: 10px;
+			}
+			.qr-code {
+				/*width: 256px;*/
+				margin: 0 auto;
+			}
+			#content {
+				/*width: 256px;*/
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img src="img/b_reg_success_part1.png"  />
+		<div class="pos-re">
+			<div class="wrap-qrcode">
+				<div id="qrcode" class="qr-code"></div>
+				<div id="content" style="position: absolute;top:0px;left:50%;margin-left: -30%;">
+					<img src=""  />
+				</div>
+			</div>
+			
+			<img src="img/b_reg_success_part2.png"  />
+		</div>
+		<div class="footer state-list mb10">
+	 		<ul>
+	 			<li>本活动仅供英语学习参考</li>
+	 		</ul>
+	 	</div>
+		
+		<!--<div class="tips">长按保存二维码，微信识别二维码，即可进行语音测评啦~</div>-->
+	<!--	<img src="img/qr_code.jpg" class="qr-code qr-code-before" />
+		<img src="img/qr_code_after.jpg" class="qr-code qr-code-after" />-->
+		
+		<!--<div class="pos-re">
+			<div id="qrcode" class="qr-code"></div>
+			<div id="content" style="position: absolute;top:0px;left:50%;margin-left: -128px;">
+				<img src=""  />
+			</div>
+		</div>-->
+		
+		<!--<div class="server-id">此处显示serverid</div>-->
+		<!--<div class="record-title-list">
+			<ul>
+				<li><img src="img/record_microphone.png"></li>
+		 		<li><img src="img/record_title.png"></li>
+		 	</ul>
+		</div>
+		<div class="wrap-record-info">
+			<img src="img/title_record.png" />
+			<div class="question">
+				<img src="img/empty_bg.png" />
+				<div class="source-text "><span class="fb">原文：</span><span>Knowlegde can change your fate and English can accomplish your future.</span></div>
+				<div class="wrap-source-voice">
+					<div class="patten-voice">
+						<img src="img/icon_white_trumpet.png"  />
+						<i class="line line-1"></i><i class="line line-2"></i>
+						<span>播放原音</span>
+					</div>
+				</div>
+				
+				
+				<audio src="demo_record.mp3" id="recordAudio"></audio>
+			</div>
+
+		</div>
+
+			<div class="wrap-btn record-btn" localId='' >
+			</div>
+		<div class="btn-list mb20">
+			<div class="wrap-opet-btn" onclick="upload_voice()"><img src="img/btn_up.png"></div>
+			<div class="wrap-opet-btn" onclick="reset_recrod()"><img src="img/btn_repeat.png"></div>
+		</div>
+		<div class="footer state-list mb10">
+	 		<ul>
+	 			<li>本活动仅供英语学习参考</li>
+	 		</ul>
+	 	</div>
+		<div class="wrap-pop">
+			<img src="img/pop_part1.png" id="" />
+			<img src="img/pop_part2.png" id="" />
+			<img src="img/icon_close.png" class="close-btn close-record" onclick="partOut()" />
+		</div>
+		<div class="pop-bg">-->
+	</body>
+
+</html>
+<script src="js/jquery-1.11.2.js "></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script>
+	
+	
+	//封装$$
+	function $$(id){
+		return document.getElementById(id);
+	}
+	
+	window.onload = function(){
+		fixedFooter();
+		$('#qrcode').qrcode("http://activity-test.lestata.com/H5/speech_test/hej_index_demo.html?type="+getCache('TYPE')+'&user_city='+getCache('CITY_NUM')+'&browser=1');
+		console.log("http://activity-test.lestata.com/H5/speech_test/hej_index_demo.html?type="+getCache('TYPE')+'&user_city='+getCache('CITY_NUM')+'&browser=1');
+		var canvas = document.getElementsByTagName("canvas")[0];
+		console.log($(window).width());
+		var win_width = $(window).width();
+		canvas.style.width = win_width*0.5 + 'px';
+		canvas.style.height = win_width*0.5 + 'px';
+		var image = new Image();
+		$("#content img").attr("src",canvas.toDataURL("image/png"));
+	}
+</script>
+<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script src="js/config.js "></script>
+<script src="js/share.js "></script>
+<script src="js/hej_index_demo_browser.js"></script>-->

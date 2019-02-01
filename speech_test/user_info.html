@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文--用户信息</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/user_info.css">
+		<style>
+			.prize-list {
+				position: relative;
+				z-index: 1;
+			}
+			.prize-list ul li {
+				position: absolute;
+				left: 0px;
+				top:0px;
+			}
+			.prize-list ul li{
+				-webkit-animation-iteration-count: 1;  
+			    -moz-animation-iteration-count: 1;  
+			    animation-iteration-count: 1; 
+			}
+			.prize-list ul li:nth-child(1){
+				-webkit-animation: bounceInDown 2s ease 0.5s 1 both; 
+			    -moz-animation: bounceInDown 2s ease 0.5s 1 both;
+			    animation: bounceInDown 2s ease 0.5s 1 both; 
+			}
+			.prize-list ul li:nth-child(2){
+				-webkit-animation: bounceInDown 3s ease 0.5s 1 both; 
+			    -moz-animation: bounceInDown 3s ease 0.5s 1 both;
+			    animation: bounceInDown 3s ease 0.5s 1 both; 
+			}
+			.prize-list ul li:nth-child(3){
+				-webkit-animation: bounceInDown 5s ease 0.5s 1 both; 
+			    -moz-animation: bounceInDown 5s ease 0.5s 1 both;
+			    animation: bounceInDown 5s ease 0.5s 1 both; 
+			}
+			.prize-list ul li:nth-child(4){
+				-webkit-animation: bounceInDown 4s ease 0.5s 1 both; 
+			    -moz-animation: bounceInDown 4s ease 0.5s 1 both;
+			    animation: bounceInDown 4s ease 0.5s 1 both; 
+			}
+			.wrap-info {
+				-webkit-animation: bounceInUp 1s ease 0.5s 1 both; 
+			    -moz-animation: bounceInUp 1s ease 0.5s 1 both;
+			    animation: bounceInUp 1s ease 0.5s 1 both; 
+			    -webkit-animation-iteration-count: 1;  
+			    -moz-animation-iteration-count: 1;  
+			    animation-iteration-count: 1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="prize-list">
+	 		 <ul>
+		 		<li><img src="img/icon_empty_prize1.png"></li>
+		 		<li><img src="img/icon_empty_prize2.png"></li>
+		 		<li><img src="img/icon_empty_prize3.png"></li>
+		 		<li><img src="img/icon_empty_prize4.png"></li>
+		 	</ul>
+	 	</div>
+	 	<div class="wrap-info">
+			<img src="../speech_test/img/info_title.png"  />
+			<div class="wrap-form">
+				<form>
+					<div class="row">
+						<label>姓&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+						<input type="text" placeholder="正确姓名更方便获得活动邀约哦" class="input-text username"/>
+					</div>
+					<div class="row">
+						<label>年&nbsp;&nbsp;&nbsp;&nbsp;龄</label>
+						<select name="ddlAge" id="ddlAge" class="select userage">
+							<option selected="selected" value="">仅限18-50周岁人士参加哦</option>
+							<option value="S">Under 15</option>
+							<option value="T">15-17</option>
+							<option value="U">18-21</option>
+							<option value="V">22-24</option>
+							<option value="W">25-29</option>
+							<option value="X">30-39</option>
+							<option value="Y">40-49</option>
+							<option value="Z">50 above</option>
+						</select>
+					</div>
+					<div class="row">
+						<label>性&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+						<div class="wrap-sex">
+							<span class="icon_sex icon_selected" data-id="male" onclick="sel_sex(this);"></span>
+							<span class="mr30 ml5">男</span>
+							<span class="icon_sex" data-id="female" onclick="sel_sex(this);"></span>
+							<span class="ml5">女</span>
+						</div>
+					</div>
+					<div class="row">
+						<label>城&nbsp;&nbsp;&nbsp;&nbsp;市</label>
+						<select name="ddlCity" id="ddlCity" class="select">
+							<option value="">仅限下拉的11个城市参加哦</option>
+							<option value="1">北京</option>
+							<option value="2">上海</option>
+							<option value="3">广州</option>
+							<option value="4">深圳</option>
+							<option value="5">天津</option>
+							<option value="6">杭州</option>
+							<option value="7">青岛</option>
+							<option value="8">南京</option>
+							<option value="9">佛山</option>
+							<option value="10">无锡</option>
+							<option value="11">苏州</option>
+							<option value="12">其他</option>
+						</select>
+					</div>
+					<div class="row">
+						<label>手&nbsp;&nbsp;&nbsp;&nbsp;机</label>
+						<input type="number" placeholder="正确号码是获得礼物的关键" class="input-text iphone" />
+					</div>
+					<div class="row">
+						<label>验证码</label>
+						<input type="text" class="input-text short-text input-yzm" /><span class="yzm" onclick="yzm()">ABCD</span>
+					</div>
+					
+				</form>
+			</div>
+			<div class="win60 mAuto wrap-btn-test">
+				<div onclick="info_verify(event)" ontouchstart = "info_verify(event)"><img src="img/btn_test.png"></div>		
+		 	</div>
+	 	</div>
+	 	<div class="footer state-list mb10">
+	 		<ul>
+	 			<li>本活动仅供英语学习参考</li>
+	 		</ul>
+	 	</div>
+	</body>
+</html>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script src="js/jquery-1.11.2.js "></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script src="js/config.js "></script>
+<script src="js/share.js "></script>
+<script src="js/common.js"></script>
+<script>
+	window.onload = function(){
+		fixedFooter();
+	}
+	yzm();
+	function yzm(){
+	    var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'];
+	    var str = '';
+	    for(var i = 0 ; i < 4 ; i ++ )
+	        str += ''+arr[Math.floor(Math.random() * arr.length)];
+	   	console.log(str.toUpperCase());
+	   	$(".yzm").text(str.toUpperCase());
+	    return str;
+	}
+	
+	function sel_sex(obj){
+		var class_list =  $(obj).attr("class");
+		if(class_list.indexOf(".icon_selected") < 0){
+			$(obj).addClass("icon_selected").siblings(".icon_sex").removeClass("icon_selected");
+		}
+	}
+	
+	var reg_iphone = /^1(3|4|5|7|8)\d{9}$/;
+	/*验证手机号*/
+	function check_iphone() {
+		var iphone = $(".iphone").val();
+		console.log(reg_iphone.test(iphone));
+		if(!reg_iphone.test(iphone)) {
+			mui.toast("手机号格式不对或为空，请重新输入！");
+			is_iphone = false;
+		}
+		else {
+			is_iphone = true;
+		}
+		return is_iphone;
+	}
+	
+	function check_yzm(){
+		var user_yzm = $(".input-yzm").val();
+		user_yzm = user_yzm.toUpperCase();
+		var span_yzm = $(".yzm").text();
+		if(user_yzm==span_yzm){
+			return true;
+		}else{
+			mui.toast("验证码输入错误或为空~");
+			return false;
+		}
+	}
+
+function info_verify(event) {
+	console.log(event);
+	event.stopPropagation();
+	event.preventDefault();
+	console.log(getCache('TYPE'));
+	if(getCache('TYPE') == 'after'){
+		window.location.href = 'lottery.html';
+	}else{
+		
+		if(is_weixn()){
+			window.location.href="hej_index_demo.html?type="+getCache('TYPE')+'&user_city='+getCache('CITY_NUM');
+		}else{
+			window.location.href="hej_index_demo_browser.html?type="+getCache('TYPE')+'&user_city='+getCache('CITY_NUM');
+		}
+		/*window.location.href="hej_index_demo.html?number="+Math.random();*/
+	}
+	/*
+	
+	
+	if(is_weixn()){
+		window.location.href="hej_index_demo.html?number="+Math.random();
+	}else{
+		window.location.href="hej_index_demo_browser.html?number="+Math.random();
+	}*/
+	
+	
+	
+	
+	return;
+	var user_name = $(".username").val();
+	if(!user_name){
+		mui.toast("姓名不能为空~");
+		return false;
+	}
+	var user_age = $(".userage").val();
+	if(!user_age){
+		mui.toast("请选择年龄~");
+		return false;
+	}
+	var user_sex = $(".icon_selected").attr("data-id");
+	var user_city = $("#ddlCity").val();
+	if(!user_city){
+		mui.toast("请选择城市~");
+		return false;
+	}else{
+		setCache("CITY_NUM",user_city);
+	}
+	var isphone = check_iphone();
+	if(!isphone){
+		return false;
+	}
+	var yzm = check_yzm();
+	if(!yzm){
+		return false;
+	}
+	var userinfo ={};
+	userinfo.uid = getCache('UID');
+	if(!userinfo.uid){
+		uid =1;
+	}
+	userinfo.name = user_name;
+	userinfo.age = user_age;
+	userinfo.sex = user_sex;
+	userinfo.city = user_city;
+	userinfo.phone = isphone;
+	submit_userinfo(userinfo);
+}
+
+/*提交用户信息*/
+function submit_userinfo(data){
+	$.ajax({
+		type: "post",
+		url: add_user_url,
+		data,
+		dataType: "json",
+		/*headers: {
+			'X-Requested-With': "XMLHttpRequest"
+		},*/
+		xhrFields: {
+			withCredentials: true
+		},
+		success: function(res){
+			if(res.code==200){
+				if(is_weixn()){
+					window.location.href="hej_index_demo.html";
+				}else{
+					window.location.href="hej_index_demo_browser.html";
+				}
+				setCache("APPID",res.data.openid);
+			}else{
+				mui.toast(res.error+"请检查手机是否已注册过~");
+			}
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			Toast("可能网络不佳 ＞﹏＜ 请小主重试一下");
+		}
+	});
+}
+</script>

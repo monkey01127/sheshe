@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文测评</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css?v=1.0.0">
+		<link rel="stylesheet" href="css/common.css?v=1.0.0">
+		<link rel="stylesheet" href="css/animate.css?v=1.0.0">
+		<link rel="stylesheet" href="css/hej_index_demo.css?v=1.0.0">
+		<style>
+			.btn-list {
+				overflow: hidden;
+			}
+			.wrap-btn span {
+				display: none;
+			}
+			.on-record {
+				position: relative;
+			}
+			.on-record span.time-amount {
+				position: absolute;
+				text-align: center;
+			    width: 100%;
+			    top: 50%;
+			    display: block;
+			    color: #fff;
+			    font-size: 1.8rem;
+			    letter-spacing: 2px;
+			    font-weight: bold;
+			}
+			.icon_record_tips {
+				position: absolute;
+				width: 50%;
+				top:10.5%;
+				left: 50%;
+				margin-left: -25%;
+				z-index: 11;
+				display: none;
+			}
+			.step {
+				position: absolute;
+				z-index: 11;
+				/*opacity: 0;*/
+				left: 50%;
+				/*display: none;*/
+				text-align: center;
+			}
+			.step1 {
+			    width: 195px;
+			    top:47.5%;
+   				margin-left: -97.5px;
+			}
+			.step2 {
+			    width: 80%;
+			    top: 31%;
+			    margin-left: -40%;
+			}
+			.step3 {
+			   width: 276px;
+			   top: 50.5%;
+			   margin-left: -138px;
+			}
+			.step img {
+				/*opacity: 0;*/
+				display: none;
+			}
+			/*.step1 .img-step2 {
+				opacity: 1;
+			}*/
+			/*.step1 .img-step1 {
+				display: block;
+			}*/
+			.step2 .img-step2,.step3 .img-step3 {
+				display: none;
+			}
+			.record-tips-bg {
+				opacity: 0.8;
+			}
+			.wrap-tips-btn button {
+				width: 85px;
+			    height: 32px;
+			    border: 1px solid #fff;
+			    line-height: 30px;
+			    text-align: center;
+			    background: none;
+			    color: #fff;
+			    margin: 50px auto;
+			    font-size: 1.6rem;
+			    font-weight: bold;
+			    letter-spacing: 2px;
+			}
+			.wrap-tips-btn {
+				display: none;
+			}
+			.wrap-tips-btn button:active {
+				background: none!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div class="server-id">此处显示serverid</div>-->
+		<div class="record-title-list">
+			<ul>
+				<li><img src="img/record_microphone.png"></li>
+		 		<li><img src="img/record_title.png"></li>
+		 	</ul>
+		</div>
+		<div class="wrap-record-info">
+			<img src="img/title_record.png" />
+			<div class="question">
+				<img src="img/empty_bg.png" />
+				<div class="source-text "><span class="fb">原文：</span><span>Knowlegde can change your fate and English can accomplish your future.</span></div>
+				<div class="wrap-source-voice">
+					<!--<img src="img/icon_record_play.png" class="icon_record_opreate play" />-->
+					<div class="patten-voice">
+						<img src="img/icon_white_trumpet.png"  />
+						<i class="line line-1"></i><i class="line line-2"></i>
+						<span>播放原音</span>
+					</div>
+				</div>
+				
+				
+				<audio src="demo_record.mp3" id="recordAudio"></audio>
+			</div>
+
+		</div>
+
+		<!--	<img src="img/part1.png" class="part1" />-->
+			<!--<img class="wrap-btn record-btn" src="img/icon_tips.png" localId='' />-->
+			<div class="wrap-btn" localId='' >
+			</div>
+			<!--<a href="weixin://" class="open-wx">打开微信</a>-->
+			<!--<a href="weixin://weixin.qq.com" class="open-wx">打开微信</a>-->
+			<!--<a href="weixin://dl/privacy/weixin.qq.com" class="open-wx">打开微信</a>-->
+			<!--<a href="weixin://profile/gh_827e40b1d40f" class="open-wx">打开微信</a>-->
+		<div class="btn-list mb20">
+			<div class="wrap-opet-btn" onclick="upload_voice()"><img src="img/btn_up.png"></div>
+			<div class="wrap-opet-btn" onclick="reset_recrod()"><img src="img/btn_repeat.png"></div>
+		</div>
+		<div class="footer state-list mb10">
+	 		<ul>
+	 			<li class="mb10"><a onclick="partIn2();" style="display: none;">游戏规则</a></li>
+	 			<li>本活动仅供英语学习参考</li>
+	 		</ul>
+	 	</div>
+	 	<!--首次录音提示-->
+	 	<img src="img/icon_record_tips.png" class="icon_record_tips" />
+	 	<div class="step step1">
+			<img src="img/icon_step1.png" class="img-step1"/>
+			<div class="img-step1 wrap-tips-btn"><button class="btn-next win30">下一步</button></div>
+			<img src="img/icon_step2.png" class="img-step2"/>
+			<img src="img/icon_step3.png" class="img-step3"/>
+		</div>
+		<div class="img-step2 wrap-tips-btn win80" style="position: absolute;
+			z-index: 999;margin: 0px;width: 50%;left: 25%;">
+			<button class="btn-pre win30 fl" style="margin: 0px;">上一步</button>
+			<button class="btn-next win30 fr" style="margin: 0px;">下一步</button>
+		</div>
+		<div class="img-step3 wrap-tips-btn" style="position: absolute;
+			z-index: 999;margin: 0px;width: 50%;left: 25%;">
+			<button class="btn-pre win30 fl" style="margin: 0px;">上一步</button>
+			<button class="btn-finish win30 fr" style="margin: 0px;">完成</button>
+		</div>
+			
+		<div class="wrap-pop">
+			<img src="img/pop_part1.png" id="" />
+			<img src="img/pop_part2.png" id="" />
+			<img src="img/icon_close.png" class="close-btn close-record" onclick="partOut()" />
+		</div>
+		<div class="wrap-pop wrap-pop2">
+			<img src="img/b_rules.png" id="rules" />
+			<img src="img/icon_close.png" class="close-btn" onclick="partOut()" />
+	 	</div>
+		<div class="pop-bg">
+	</body>
+
+</html>
+<script>
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-1.11.2.js?v=1.0.0"></script>
+<script type="text/javascript" src="js/mui.min.js?v=1.0.0"></script>
+<script src="js/config.js?v=1.0.0"></script>
+<script src="js/common.js?v=1.0.0"></script>
+<script src="js/share2.js?v=1.0.0"></script>
+<!--<script src="js/hej_index_demo.js?v=1.0.0" ></script>-->

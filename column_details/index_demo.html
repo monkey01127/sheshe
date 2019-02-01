@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>专栏详情</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/index.css?_v=123456">
+		<link rel="stylesheet" href="css/animations.css">
+	</head>
+	<body>
+		<input type="hidden" id="column_id" />
+		<input type="hidden" id="topDiv" />
+		<input type="hidden" id="bottmDiv" />
+		<div class="container">
+			
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script id="page" type="text/template">
+	<div class="top win80 preloader">
+		<ul>
+			<li>下滑浏览</li>
+			<li>上一篇文章</li>
+		</ul>
+	</div>
+	<div class="page p-<%=article_type%>" id="page" column_id="<%=column_id%>">
+		<h3>
+			<%=obj.title%>
+		</h3>
+		<div class="part1">
+			<%=obj.content%>
+		</div>
+		<div class="win80 mAuto">
+			<div class="tag-list">
+				<ul>
+					
+				</ul>
+			</div>
+			<div class="part2">
+				<%=obj.intro%>
+			</div>
+		</div>
+		<div class="free-statement win80 mAuto part2">
+			<ul>
+				<li onclick="showState(this);">免责声明</li>
+				<li class="icon-arrow" onclick="showState(this);"><img src="img/icon_arrow_up.png" /></li>
+			</ul>
+			<p class="state-con" onclick="showState(this);">
+			本文仅代表作者个人观点，与她她无关。其原创性以及文中陈述文字和内容未经本站证实，对本文中文字的真实性，她她不作任何评述，请读者仅作参考。如无特别声明，本站转载之各种内容之版权均属其著作权人所有。部分转载作品涉及到无法联系到作者本人的情况，如果我们的转载行为侵犯了您的正当权益，请第一时间联系我们，我们将在最短的时间内删除，并致以歉意。
+			</p>
+		</div>
+		<div class="footer win80" style="width: 76%;">
+			<ul>
+				<li>上滑浏览</li>
+				<li>下一篇文章</li>
+			</ul>
+		</div>
+	</div>
+</script>
+<script id="li" type="text/template">
+	<% _.each(obj, function(item, i) { %>
+		<li onclick="clickIosAndAndrow(this.innerText);">
+			<%=item%>
+		</li>
+	<% }); %>
+</script>
+<script src="js/index.js"></script>

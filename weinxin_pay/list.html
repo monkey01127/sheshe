@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name = "format-detection" content = "telephone=no">
+		<title>微信充值</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/list.css">
+	</head>
+	<body>
+		<div class="info-login">
+			<img src="img/default_header.png" class="user_header"  />
+			<a class="login-btn">请先登录</a>
+			<div class="uname"></div>
+			<span class="f-small">请登录她她号才能充值哦</span>
+		</div>
+		<div class="list">
+			<div class="l-title">充值</div>
+			<ul>
+			</ul>
+			<img src="img/loading.gif" id="loading" />
+		</div>
+		<div class="pop-dialog">
+			<div class="p-title">
+				确认支付
+			</div>
+			<div class="oder-info">
+				<dl>
+					<dt class="red-color" id="allMoney">sdfsdf</dt>
+					<dd>充值账号：<span class="nickname">我是她她</span></dd>
+					<dd>充值数量：<span class="dou-nums">123456789</span>她豆</dd>
+				</dl>
+			</div>
+			<div class="bt-list-bar">
+				<button class="win50 fl close">取消</button>
+				<span class="green-vertical-line"></span>
+				<button class="win50 fr topay" recharge_id="">充值</button>
+			</div>
+		</div>
+		<div class="success-dialog">
+			<div class="p-title">
+				充值成功
+			</div>
+			<div class="oder-info">
+				请稍候在她她APP内查看"我的她豆"
+			</div>
+			<div class="bt-list-bar">
+				<button class="win50 fl close">好的</button>
+			</div>
+		</div>
+		<div class="pop-bg"></div>
+	</body>
+</html>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script id="list" type="text/template">
+	<li data-id="<%=recharge_id%>">
+		<%=active_icon_html%>
+		<span class="nums fl"><%=ta_beans_standard%></span>
+		<span class="s-name fl">她豆</span>
+		<span class="s-zeng fl"><%=zeng_word%></span>
+		<a class="fr pay-btn" nums="<%=ta_beans%>" money="￥<%=ta_rmb%>" recharge_id="<%=recharge_id%>" >￥<%=ta_rmb%></a>
+	</li>
+</script>
+<script src="js/list.js"></script>

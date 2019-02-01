@@ -1,0 +1,30 @@
+.win80{
+	width:80%;
+}
+.pos-re{
+	position: relative;
+}
+.pos-fix{
+	position: fixed;
+}
+.pos-abt{
+	position: absolute;
+}
+.mAuto{
+	margin: 0 auto;
+}
+.btn-loog{
+    margin: 2.5rem auto 4rem;
+    height: 4rem;
+    color: #fff;
+    display: block;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    background: #d2d2d2;
+}
+.btn-green{
+	background: #5dd9cb;
+}

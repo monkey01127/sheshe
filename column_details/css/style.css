@@ -1,0 +1,178 @@
+body{
+	color:#666;
+	background: #f3f3f3;
+}
+.mBottom10{
+			margin-bottom: 10px;
+}
+.header-bar{
+	color: #fff;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #5dd9cb;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 44px;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+}
+/*.header-bar .back {
+	display: block;
+	width:10px;
+	margin-top: 13px;
+	margin-left: 15px;
+}
+.page-name{
+	width: 90%;
+    margin: 0 auto;
+    font-size:18px;
+}*/
+.wrap-div{
+	background: #fff;
+}
+.words {
+	background: #fff ;
+	padding-top: 10px;
+	padding-bottom: 35px;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+} 
+.fixed-linkway{
+	position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    font-size: 8px!important;
+    bottom: 5.5%;
+}
+/*Toast提示样式*/
+@charset "utf-8";
+/* CSS Document */
+/*mui部分*/
+.KUI-Toast {
+	position: fixed;
+	border-radius: 8px;
+	text-align: center;
+	left: 50px;
+	right: 50px;
+	top: -110px;
+	line-height: 40px;
+	font-size: 16px;
+	color: white;
+	background-color: #5dd9cb;
+	opacity: 0;
+	border: 1px solid white;
+	color: white;
+	z-index: 91000;
+	-moz-box-shadow: 3px 3px 5px #5dd9cb;
+	-webkit-box-shadow: 3px 3px 5px #5dd9cb;
+	box-shadow: 3px 3px 5px #5dd9cb;
+}
+.KUI-Toast-show {
+	top: 50px;
+	opacity: 0.9;
+	transition: 0.5s ease-in-out;
+}
+.KUI-Toast-hide {
+	top: -110px;
+	opacity: 0.2;
+	transition: all 0.3s ease-in-out;
+	border:none;
+}
+.KUI-Show {
+	display: block;
+}
+.KUI-Hide {
+	display: none;
+}
+
+
+/*弹出框*/
+.pop-dialog{
+	position: fixed;
+	width:80%;
+	left:50%;
+	margin-left:-40%;
+	height:150px;
+	top:50%;
+	margin-top: -75px;
+	background: #fff;
+	border-radius: 5px;
+	z-index: 99;
+	display: none;
+}
+.pop-con{
+	height:105px;
+	line-height: 105px;
+	text-align: center;
+}
+.bt-list-bar{
+	height:41px;
+	width:100%;
+	border-top:1px solid #adadad;
+}
+.bt-list-bar button{
+	width:50%;
+	text-align: center;
+	line-height: 41px;
+	background: #fff;
+	float:left;
+	font-size:15px;
+	color: #666;
+}
+.vertical-line {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 45px;
+  background: #adadad;
+  z-index: 99;
+}
+#unPayDialog .bt-list-bar button{
+	width: 100%;
+	font-size: 15px;
+}
+#unPayDialog .pop-con{
+	margin-top: 30px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    height: auto;
+    font-size:13px;
+}
+.pop-bg{
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.3);
+	display: none;
+	opacity: ;
+}
+.pop-bg.pop-white{
+	background-color: rgba(0,0,0,0);
+}
+.header-bar .back {
+	display:block;
+ 	top:0px;
+ 	left:15px;
+ 	position:absolute;
+}
+.page-name { 
+	width: 100%;
+	margin: 0 auto;
+	font-size:18px;
+	text-align: center;
+}

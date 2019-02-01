@@ -1,0 +1,60 @@
+{
+    "data": {
+        "legend": {
+            "data": [
+                "一年到三年123",
+                "三年到五年",
+                "五年到十年",
+                "十年以上",
+                "不到一年",
+                "记不清了",
+                "test1",
+                "test2"
+            ]
+        },
+        "color_type":"2",
+        "series": {
+            "data": [
+                {
+                    "value": 60,
+                    "percent": "59.40594059"
+                },
+                {
+                    "value": 3,
+                    "percent": "2.97029703"
+                },
+                {
+                    "value": 4,
+                    "percent": "3.96039604"
+                },
+                {
+                    "value": 8,
+                    "percent": "7.92079208"
+                },
+                {
+                    "value": 9,
+                    "percent": "8.91089109"
+                },
+                {
+                    "value": 16,
+                    "percent": "15.84158416"
+                },
+                {
+                    "special_item": "1",
+                    "value": 24,
+                    "percent": "23.76237624"
+                },
+                {
+                    "special_item": "1",
+                    "value": 36,
+                    "percent": "35.64356436"
+                }
+            ]
+        },
+        "title": {
+            "subtext": "我是圆环图负标题",
+            "text": "我是圆环图正标题",
+            "source": "基数：Base=所有被访者n=101\n\n数据来源：Q2a"
+        }
+    }
+}

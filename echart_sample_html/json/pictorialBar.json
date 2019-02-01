@@ -1,0 +1,42 @@
+﻿{
+    "status": "0",
+    "error": "",
+    "data": {
+        "title": {
+            "text": "您向朋友/同事推荐{#Q2#}的可能性有多大？（请用0-10分表示）",
+            "subtext": "您向朋友/同事推荐{#Q2#}的可能性有多大？（请用0-10分表示）",
+            "source": "基数: 所有被访者 n=8 \n\n数据来源：Q4.1"
+        },
+        "legend": {
+            "data": []
+        },
+        "xAxis": {
+            "data": []
+        },
+        "yAxis": {
+            "data": [
+                "Passives",
+                "Promoters",
+                "Detractors"
+            ]
+        },
+        "data": {
+            "series": {
+                "data": [
+                    {
+                        "value": 1,
+                        "percent": 12.5
+                    },
+                    {
+                        "value": 5,
+                        "percent": 62.5
+                    },
+                    {
+                        "value": 2,
+                        "percent": 25
+                    }
+                ]
+            }
+        }
+    }
+}

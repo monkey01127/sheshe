@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文--抽奖</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/index.css">
+		<style>
+			img {
+				display: block;
+			}
+			.btn {
+				width: 40%;
+				position: absolute;
+				top:45%;
+				left: 50%;
+				margin-left: -20%;
+			}
+			body{
+				background: url(img/result_prize4.png) no-repeat;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="btn" src="img/btn_enter_test.png" onclick="link_to_record();" />
+	</body>
+</html>
+<script src="js/common.js"></script>
+<script>
+	function link_to_record(){
+		setCache('TYPE','before');
+		window.location.href = "hej_index_demo.html";
+	}
+</script>

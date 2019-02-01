@@ -1,0 +1,10 @@
+.report-txt{
+	padding: 30px 25.5px 20px 25.5px;
+}
+.report-txt p{
+	color: #474c4B;
+	font-size: 1.3rem;
+	line-height: 25px;
+	/*text-indent: 2rem;*/
+	margin-bottom: 22px;
+}

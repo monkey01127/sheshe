@@ -1,0 +1,130 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg_result.jpg) no-repeat;
+	/*background: url(../img/text_bg.png) no-repeat;*/
+	background-size: 100% 100%;
+}
+
+.title-result {
+	width: 100%;
+}
+
+.wrap-result {
+	margin-top: -4px;
+	width: 50%;
+	background: #fff;
+	position: relative;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	/*animation:moveDown 5s 1;
+				-webkit-animation:mymove 5s 1; */
+	/*opacity:0;*/
+	/*min-height: 20rem;*/
+}
+
+@keyframes mymove {
+	from {
+		top: 0px;
+	}
+	to {
+		top: 200px;
+	}
+}
+
+@-webkit-keyframes mymove
+/*Safari and Chrome*/
+
+{
+	from {
+		left: 0px;
+	}
+	to {
+		left: 200px;
+	}
+}
+
+.wrap-result .describe dl {
+	display: none;
+}
+
+.wrap-result .r-score {
+	color: #f12c3e;
+	font-weight: bold;
+	font-size: 4.5rem;
+	text-align: center;
+	padding: 3.5rem 0 3rem 0;
+}
+
+.wrap-result .r-score span {
+	margin-right: 0.5rem;
+	font-size: 6.4rem;
+}
+
+.wrap-result .r-txt {
+	color: #406683;
+	background: #c9eef7;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 1.5rem 0 1.5rem 0;
+	line-height: 2rem;
+}
+
+.wrap-result .r-txt dt {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-indent: 18px;
+}
+
+.wrap-result .r-txt dt + dd{
+	text-indent: 15px;
+}
+.wrap-result .r-txt dd {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-indent: 4px;
+	letter-spacing: 1px;
+}
+
+.wrap-btn {
+	position: fixed;
+	margin: -30%;
+	left: 50%;
+	bottom: 50%;
+}
+
+.arrow-list {
+	height: 23px;
+	background: url(../img/icon_arrow.png) repeat-x;
+}
+
+@media only screen and (max-width: 320px) {
+/*	.wrap-result .r-score {
+		padding: 1rem 0 1rem 0;
+	}*/
+	.wrap-btn {
+	    bottom: 47%;
+	}
+	.wrap-result .r-txt dt {
+		font-size: 2rem;
+		margin-bottom: 0rem;
+	}
+	.wrap-result .r-txt dd {
+	    font-size: 1.2rem;
+	    font-weight: bold;
+	}
+}
+
+@media only screen and (max-height: 560px) {
+	.wrap-btn {
+		position: static;
+		margin: auto;
+		margin-bottom: 2rem; 
+	}
+	.fixed-bottom {
+		position: static;
+	}
+	body{
+		height: auto!important;
+	}
+}

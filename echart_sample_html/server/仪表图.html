@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>echart测试---分组比较——百分比堆积柱形图</title>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/jquery-1.11.2.js"></script>
+		<link rel="stylesheet" href="css/base.css">
+		<style>
+			.data-source ul li {
+				text-indent: 5px;
+			}
+			
+			.data-source {
+				width: 550px;
+				margin: 0 auto;
+				margin-top: -20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<ul class="wrap-echarts-list">
+			<li><a href="圆环图（pie）.html">1.饼图</a></li>
+			<li><a href="ppt_22_数字题：分布趋势直方图.html">2.直方图</a></li>
+			<li><a href="多列纵向__百分比堆积柱形图（bar）.html">3.百分比堆积条形图</a></li>
+			<li><a href="词云图（椭圆形）.html">4.词云图</a></li>
+			<li><a href="ppt_40_网格题：折线图.html">5.折线图</a></li>
+			<li><a href="多列对比横向__条形图.html">6.多列对比横向__条形图</a></li>
+			<li class="active"><a href="仪表图.html">7.仪表图</a></li>
+		</ul>-->
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<div id="main" style="width: 800px;height:600px; margin: 0 auto; "></div>
+		<script type="text/javascript">
+			var option = {
+					"title":[{
+						"left": 0,
+						"bottom": 0,
+						"subtext": '基数: 所有被访者 n=400 \n\n数据来源：B12',
+						"textStyle": {
+							"color": '#9b9b9b',
+							"fontSize": 12
+						}
+					}],
+				    "toolbox": {
+				        "show": false,
+				        "feature": {
+				            "mark": {
+				                "show": true
+				            },
+				            "restore": {
+				                "show": true
+				            },
+				            "saveAsImage": {
+				                "show": true
+				            }
+				        }
+				    },
+				    "series": [{
+				        "name": "指标",
+				        "type": "gauge",
+				        "startAngle": 180, //总的360，设置180就是半圆
+				        "endAngle": 0,
+				        "center": ["50%", "57%"], //整体的位置设置
+				        "radius": 300,
+				        "axisLine": {
+				            "lineStyle": {
+				                "width": 80, //柱子的宽度
+				                "color": [[0.9, "#ccc"], [1, "#2d99e2"]] //0.298是百分比的比例值（小数），还有对应两个颜色值
+				            }
+				        },
+				        "splitLine":{
+				        	"length": "25",
+				        	"lineStyle": {
+								//"color": "#aaa",
+								"width": 1,
+								"type": "solid"
+							},
+				        },
+				        "axisTick":{
+				        	"length": "15",
+				        	 "splitNumber": 10,
+				        	"lineStyle": {
+								//"color": "red",
+								"width": 1,
+								"type": "solid"
+							},
+				        },
+				        "axisLabel": {
+							"show": true,
+							"distance": 60,
+						},
+				        "min":-100,
+				        "max":100,
+				        "splitNumber": 4,
+				       /* "axisTick": {
+				            "show": false
+				        },
+				        "axisLabel": {
+				            "show": false
+				        },
+				        "splitLine": {
+				            "show": false
+				        },*/
+				        "pointer": {
+				            "width": 15, //指针的宽度
+				            "length": "70%", //指针长度，按照半圆半径的百分比
+				            "color": "#2d99e2"
+				        },
+				        "title": {
+				            "show": true,
+				            "offsetCenter": [0, "55%"], //标题位置设置
+				            "textStyle": { //标题样式设置
+				                "color": "#2d99e2",
+				                "fontSize": 15,
+				                "fontFamily": "微软雅黑",
+				                "fontWeight": "bold"
+				            }
+				        },
+				        "detail": {
+				            "formatter":'推荐净值\n\n{value}%',
+				            "offsetCenter": [0, '40%'],
+				            "textStyle": {
+				                "color": "#333",
+				                "fontStyle": "normal",
+				                "fontFamily": "sans-serif",
+				               "fontSize": 15,
+				            },
+				            
+				        },
+				        animation: false,
+				         data: [{value:80, name: '品牌名称'}]
+				    }]
+				};;
+			
+
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			 myChart.setOption(option, true);
+
+		</script>
+	</body>
+
+</html>
+<script src="js/common.js"></script>

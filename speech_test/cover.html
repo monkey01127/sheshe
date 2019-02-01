@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>华尔街英文--封面</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/cover.css">
+		
+		<style>
+			.state-list {
+				margin-top: 4rem;
+			}
+			.state-list ul li a{
+				font-size: 1.1rem;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+
+	<body>
+		 <div class="wrap-con">
+		 	<img src="img/big_circle.png" class="big-circle" />
+		 	<img src="img/small_circle.png" class="small-circle"/>
+		 	<img src="img/middle_circle.png" class="middle-circle" />
+		 	<img src="img/icon_letter.png" class="icon_light"  />
+		 	<img src="img/icon_microphone.png" class="icon_microphone" />
+		 	<img src="img/text_words.png" class="text-words" />
+		 	<img src="img/empty.png" style="opacity: 0;"/>
+		 	<div class="prize-list">
+		 		 <ul>
+			 		<li><img src="img/icon_prize1.png" /></li>
+			 		<li class="mt15"><img src="img/icon_prize2.png" /></li>
+			 		<li class="mt25"><img src="img/icon_prize3.png" /></li>
+			 		<li><img src="img/icon_prize4.png" /></li>
+			 	</ul>
+			 	<img src="img/icon_ribbon.png" class="icon_ribbon" />
+		 	</div>
+		 	
+		 </div>
+		 <div style="width:100%;height:180px;">
+		 </div>
+	 	<div class="win60 mAuto mt10">
+			<div onclick="enterTest()"><img src="img/btn_partin.png"></div>		
+	 	</div>
+	 	<!--<a class="a-rules" onclick="partIn()">游戏规则</a>-->
+	 	<div class="footer state-list mb10">
+	 		<ul>
+	 			<li class="mb10"><a onclick="partIn()">游戏规则</a></li>
+	 			<li>本活动仅供英语学习参考</li>
+	 		</ul>
+	 	</div>
+	 	<div class="wrap-pop">
+			<img src="img/rules.png" id="rules" />
+			<img src="img/icon_close.png" class="close-btn" onclick="partOut()" />
+	 	</div>
+	 	<div class="pop-bg">
+	</body>
+
+</html>
+<script>
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script src="js/jquery-1.11.2.js "></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script src="js/config.js "></script>
+<script src="js/share.js "></script>
+<script src="js/common.js"></script>
+<script>
+	function enterTest(){
+		window.location.href = 'user_info.html';
+	}
+	window.onload = function(){
+		fixedFooter();
+	}
+</script>

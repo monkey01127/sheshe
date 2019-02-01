@@ -1,0 +1,263 @@
+.win50 {
+	width: 50%;
+}
+
+.info-login {
+	background: #5DD9CB;
+	padding-top: 24px;
+	padding-bottom: 15px;
+}
+
+.info-login .user_header {
+	width: 25%;
+	margin-top: 24px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	margin: 0px auto;
+}
+
+.info-login .login-btn,
+.uname {
+	width: 45%;
+	color: #5DD9CB;
+	display: block;
+	background: #fff;
+	height: 40px;
+	border-radius: 20px;
+	margin: 16px auto 15px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1.5rem;
+}
+.login-btn{
+	letter-spacing: 1px;
+}
+
+.uname {
+	display: none;
+	width: 100%;
+	background: none;
+	color: #fff;
+	margin-bottom: 0px;
+}
+
+.info-login .f-small {
+	color: #fff;
+	text-align: center;
+	font-size: 1.2rem;
+	width: 100%;
+	display: block;
+	letter-spacing: 0.5px;
+}
+
+.l-title {
+	height: 30px;
+	line-height: 30px;
+	text-indent: 15px;
+	font-size: 1.4rem;
+}
+
+.list li {
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #eee;
+	box-sizing: border-box;
+	background: url(../img/tadou.png) 15px no-repeat;
+	background-size: auto 15px;
+	padding: 0px 15px;
+	text-indent: 30px;
+	font-size: 1.5rem;
+}
+.list li:last-child{
+	border-bottom: 1px solid #eee;
+}
+.list li span{
+	font-size: 1.5rem;
+}
+
+.list li .s-name {
+	text-indent: 0px;
+	margin-left: 10px;
+}
+
+.pay-btn {
+	height: 28px;
+	line-height: 28px;
+	margin-top: 11px;
+	background: #5dd9cb;
+	/*padding: 0px 20px;*/
+	color: #fff;
+	display: block;
+	text-align: center;
+	text-indent: initial;
+	border-radius: 14px;
+	letter-spacing: 1px;
+	width: 80px;
+	overflow: Hidden;
+	display: block;
+}
+#loading{
+	width: 20%;
+	margin: 50px auto;
+}
+
+/*弹出层样式*/
+
+.pop-dialog ,.success-dialog{
+	background: #fff;
+	width: 80%;
+	/*height: 236px;*/
+	margin: 25% auto;
+	position: fixed;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	margin-top: -124px;
+	margin-left: -40%;
+	border-radius: 10px;
+}
+.success-dialog {
+/*	height: 190px;*/
+}
+
+.p-title {
+	color: #4A4A4A;
+	font-size: 1.7rem;
+	text-align: center;
+	margin-top: 25px;
+}
+.success-dialog .p-title {
+	margin-top: 30px;
+	margin-bottom: 18px;
+}
+.oder-info {
+	margin-bottom: 25px;
+}
+.success-dialog .oder-info{
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 20px;
+	color: #9B9B9B;
+	width:50%;
+	margin: 0 auto;
+	
+}
+
+.oder-info dl dt,
+.oder-info dl dd {
+	width: 100%;
+	text-align: center;
+	color: #9b9b9b;
+	font-size: 1.5rem;
+}
+
+.oder-info dl dt {
+	margin: 20px auto;
+	color: #e80d28;
+	font-size: 2.1rem;
+}
+
+.oder-info dl dd {
+	color: #4a4a4a;
+	margin-bottom: 15px;
+}
+
+
+/*按钮div行*/
+
+.pop-dialog .bt-list-bar,.success-dialog .bt-list-bar  {
+	position: relative;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	border-top: 1px solid #d4e7e5;
+}
+.success-dialog .bt-list-bar {
+	margin-top: 30px;
+}
+.success-dialog .bt-list-bar button{
+	width:100%;
+	background: none;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.7rem;
+}
+
+/*弹出框按钮样式*/
+
+.pop-dialog .bt-list-bar button {
+	width: 50%;
+	display: inline-block;
+	height: 100%;
+	line-height: 50px;
+	color: #9B9B9B;
+	text-align: center;
+	float: left;
+	overflow: hidden;
+	border-radius: 0px;
+	background: none;
+	font-size: 1.7rem;
+}
+
+.pop-dialog .bt-list-bar button.fr {
+	color: #4a4a4a;
+}
+
+.pop-dialog .green-vertical-line {
+	position: absolute;
+	left: 50%;
+	width: 1px;
+	height: 50px;
+	background: #d4e7e5;
+	z-index: 99;
+}
+
+
+/*对话框背景蒙层*/
+
+.pop-bg {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.pop-dialog,
+.pop-bg ,.success-dialog{
+	display: none;
+}
+
+/*活动样式*/
+.list ul.ul-recommond li {
+	background: url(../img/tadou.png) 25px no-repeat;
+	background-size: auto 15px;
+	padding: 0px 15px 0px 25px;
+}
+
+.list ul.ul-recommond li .s-name {
+	display: none;
+}
+
+.icon_zeng {
+	display: inline-block;
+	background: url(../img/icon_zeng.png) no-repeat;
+	background-size: 100% auto;
+	height: 30px;
+	width: 30px;
+	float: left;
+	position: absolute;
+	left: 0px;
+}
+
+.list li span.s-zeng {
+	font-size: 1.3rem;
+	color: #a3aeac;
+}
+
+.list li.active span.s-zeng {
+	color: #F5A623;
+}

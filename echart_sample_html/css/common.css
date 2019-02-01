@@ -1,0 +1,12 @@
+.echart-min-width{
+	min-width:400px;
+}
+.echarts-main {
+	margin: 0 auto;
+}
+
+body {
+	padding: 30px; 
+	width: 100%;
+	box-sizing: border-box;
+}

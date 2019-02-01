@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>echart多图展示</title>
+		<script src="js/jquery-1.11.2.js"></script>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<style>
+			body{
+				max-width: 1300px;
+				margin: 0 auto;
+			}
+			.echarts-main-pictorialBar {
+				width: 550px;
+				height:335px;
+			}
+			.echarts-main-gauge {
+				width: 550px;
+				height:600px;
+			}
+			.wordCloud {
+				width: 550px;
+				height: 440px;
+			}
+			.echarts-main-map {
+				width: 550px;
+				/*height:570px;*/
+				height: 620px;
+			}
+			.wrap-map {
+				width: 550px;
+				/*height:570px;*/
+				height: 620px;
+				position: relative;
+			}
+			ul.wrap-return {
+				width: 64px;
+				position: absolute;
+				right: 0px;
+				top:100px;
+				display: none;
+			}
+			ul.wrap-return li{
+				width:64px;
+				height: 64px;
+				background: rgba(0, 0, 0,0.5);
+				color:#fff;
+				border-radius: 32px;
+				text-align: center;
+				font-size: 12px;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				/*display: block;*/
+			}
+
+			ul.wrap-return li:hover {
+				background: #732FC3;
+				cursor: pointer;
+			}
+
+			ul.wrap-return li.icon-china img {
+				width: 38px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			ul.wrap-return li.icon-arrow {
+				background: none;
+				width: 18px;
+				height: 13px;
+			}
+			ul.wrap-return li.icon-china {
+				padding-top: 8px;
+		box-sizing: border-box;
+			}
+			ul.wrap-return li.current-city {
+				line-height: 64px;
+			}
+			.echarts-main-pie {
+					width: 550px;
+					height:435px;
+			}
+
+			.echarts-main-hor-store {
+			}
+			.echarts-main-hor-single {
+				width: 550px;
+			}
+			.main-bar-line {
+				width: 80%;
+				height: 550px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="width：550px;height:40px;text-align:center;margin:0 auto;font-size:16px;font-weight:bold;">nps报告echarts图实例列表</div>
+	<!--	<div class="echarts-main echarts-main-gauge"></div>
+		<div class="echarts-main echarts-main-pictorialBar"></div>-->
+		<!--<ul class="wrap-return">
+			<li class="icon-china"><img src="img/icon_china.png" />中国</li>
+			<li class="icon-arrow"><img src="img/menu_arrow.png" /></li>
+			<li class="current-city">上海</li>
+		</ul>-->
+	</body>
+
+</html>
+<script src="js/echarts.min4.js"></script>
+<script src="js/common.js"></script>
+<script src="include/head_base.js"></script>
+<script>
+	window.onload =function(){
+		setTimeout(function(){
+			init_bar_line_echarts(7);
+		},10);
+		setTimeout(function(){
+			init_hor_single_echarts(6);
+		},50);
+		setTimeout(function(){
+			init_pie_echarts(1);
+		},100);
+		setTimeout(function(){
+			init_map_echarts(2);
+		},400);
+		setTimeout(function(){
+			init_wordCloud_echarts(3);
+		},300);
+	  setTimeout(function(){
+			init_pictorial_echarts(5);
+		},100);
+		setTimeout(function(){
+			init_gauge_echarts(4);
+		},500);
+	}
+</script>

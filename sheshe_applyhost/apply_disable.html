@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>主播禁用提示</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			body{
+				background: #F4F7F7;
+			}
+			.wrap-content{
+				margin: 60px 40px auto 40px;
+			}
+			.username{
+				font-weight: bold;
+			}
+			.wel-words,.reason{
+				color: #474c4b;
+				font-size:1.5rem;
+			}
+			.wel-words{
+				margin-bottom: 20px;
+				line-height: 15px;
+			}
+			.reason{
+				line-height: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap-content">
+			<div class="wel-words">亲爱的<span class="username"></span>主播：</div>
+			<div class="reason">
+				因你在直播平台有涉嫌违规行为，故而多次被人举报，经官方核实后，现对你进行封号处理，请知晓。Ps：若有申诉需求，请联系她她助理_三毛（ID：20011691）
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+	/*禁止主播申请提示*/
+	getContent();
+	function getContent(){
+		$.ajax({
+			type: "get",
+			url: apply_disable_url,
+			data: {
+				
+			},
+			dataType: "json",
+			headers: {
+				'X-Requested-With': "XMLHttpRequest"
+			},
+			xhrFields: {
+				withCredentials: true
+			},
+			success: function(res){
+	        	if(res.code==200){
+	        		$(".username").html(res.data.info.nickname);
+	        		$(".reason").html(res.data.info.reason);
+	        	}else{
+	        		Toast(res.error);
+	        	}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				Toast("可能网络不佳 ＞﹏＜ 请小主重试一下");
+			}
+		});
+	}
+</script>

@@ -1,0 +1,135 @@
+{
+    "code": "200",
+    "error": "获取数据成功",
+    "data": {
+        "lines": [
+            {
+                "begin": 0,
+                "end": 2.54,
+                "fluency": 97.083,
+                "integrity": 18.182,
+                "pronunciation": 12.015,
+                "sample": "Knowledge can change your fate and English can accomplish you fature",
+                "score": 2.958,
+                "usertext": "Knowledge your",
+                "words": [
+                    {
+                        "begin": 0.08,
+                        "end": 0.75,
+                        "score": 3.805,
+                        "text": "sil",
+                        "type": 4,
+                        "volume": 1
+                    },
+                    {
+                        "StressOfWord": 1,
+                        "begin": 0.75,
+                        "end": 1.18,
+                        "score": 2.182,
+                        "text": "Knowledge",
+                        "type": 2,
+                        "volume": 8.467
+                    },
+                    {
+                        "begin": 1.18,
+                        "end": 1.77,
+                        "score": 1.931,
+                        "text": "sil",
+                        "type": 4,
+                        "volume": 9
+                    },
+                    {
+                        "begin": 1.77,
+                        "end": 1.77,
+                        "score": 0,
+                        "text": "can",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 1.77,
+                        "end": 1.77,
+                        "score": 0,
+                        "text": "change",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "StressOfWord": 1,
+                        "begin": 1.77,
+                        "end": 2.3,
+                        "score": 2.624,
+                        "text": "your",
+                        "type": 2,
+                        "volume": 8.147
+                    },
+                    {
+                        "begin": 2.3,
+                        "end": 2.54,
+                        "score": 3.966,
+                        "text": "sil",
+                        "type": 4,
+                        "volume": 1.006
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "fate",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "and",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "English",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "can",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "accomplish",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "you",
+                        "type": 1,
+                        "volume": 0
+                    },
+                    {
+                        "begin": 2.54,
+                        "end": 2.54,
+                        "score": 0,
+                        "text": "fature",
+                        "type": 1,
+                        "volume": 0
+                    }
+                ]
+            }
+        ],
+        "version": "full 1.0"
+    }
+}

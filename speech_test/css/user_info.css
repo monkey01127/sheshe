@@ -1,0 +1,95 @@
+.wrap-form {
+	background: url(../img/info_bg.png) no-repeat;
+	background-size: 100% 100%;
+	padding-bottom: 3.8rem;
+}
+
+.wrap-form form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrap-form form .row {
+	overflow: hidden;
+	height: 4rem;
+}
+
+label,
+input,
+select,
+.wrap-sex {
+	display: block;
+	float: left;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.5rem;
+}
+
+label {
+	color: #406683;
+	font-weight: bold;
+	width: 20%;
+}
+
+input.input-text[type=text],input.input-text[type=number],
+.select,
+.wrap-sex {
+	background: #fff;
+	color: #a6b8c5;
+	border-radius: 5px;
+	width: 80%;
+	padding: 2px;
+	box-sizing: border-box;
+	font-size: 1.5rem;
+	font-weight: normal;
+	letter-spacing: 1px;
+	padding-left: 1rem;
+	border: none;
+/*	line-height: 21px;*/
+	margin-bottom: 0;
+	height: 3.5rem;
+}
+
+.wrap-sex span {
+	float: left;
+}
+
+.wrap-sex .icon_sex {
+	background: url(../img/icon_empty.png) center no-repeat;
+	background-size: 85%;
+	/* padding: 0.5rem 0 0.5rem 1rem; */
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-top: 0.75rem;
+	float: left;
+}
+
+.wrap-sex .icon_selected {
+	background: url(../img/icon_selected.png) center no-repeat;
+	background-size: 85%;
+}
+
+input.input-text[type=text].input-text.short-text {
+	width: 60%;
+	border: none;
+}
+
+.yzm {
+	width: 18%;
+	background: #fab5bc;
+	color: #fff;
+	letter-spacing: 1px;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 3rem;
+	display: block;
+	float: right;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.wrap-btn-test {
+	margin-top: -9%;
+	padding-bottom: 10px;
+}

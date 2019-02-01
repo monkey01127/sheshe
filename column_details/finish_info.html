@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<title>完善订单信息</title>
+		<meta  name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/finish_info.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="header-bar">
+			完善订单信息
+		</div>
+		<div id="wrapper" style="overflow: hidden;">
+			<div id="scroller">
+				<div id="personInfo">
+						<ul class="mBottom10">
+							<li>
+								<div class="field">
+									<span class="white">*</span>
+									<span class="field-name">出行日期</span>					
+								</div>	
+								<input type="text" class="ip-text" readonly="readonly" value="2016年12月30日、31日"/>		
+							</li>
+							<li>
+								<div class="field">
+									<span class="white">*</span>
+									<span class="field-name">剩余人数</span>					
+								</div>	
+								<input type="text" class="ip-text remain-nums" readonly="readonly" value=""/>
+							</li>
+							<li>
+								<div class="field">
+									<span class="red">*</span>
+									<span class="field-name">选择人数</span>					
+								</div>	
+								<span class="price red">￥1550元/人</span>
+								<div class="mui-numbox" data-numbox-min='1' data-numbox-max='18'>
+									<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+									<input id="test" class="mui-input-numbox people-nmus" type="number" value="1" name="people_nmus" />
+									<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+								</div>
+							</li>
+							<li>
+								<div class="field">
+									<span class="red">*</span>
+									<span class="field-name">联系人</span>					
+								</div>	
+								<input type="text" id="userName" class="ip-text user-name" placeholder="请输入联系人" />		
+							</li>
+							<li>
+								<div class="field">
+									<span class="red">*</span>
+									<span class="field-name">手机号</span>					
+								</div>	
+								<input type="number" id="iphoneNum" class="ip-text user-iphone" placeholder="请输入手机号" />		
+							</li>
+							<li>
+								<div class="field">
+									<span class="red">*</span>
+									<span class="field-name">身份证</span>					
+								</div>	
+								<input type="number" id="cardId" class="ip-text user-id" placeholder="请输入身份证" />		
+							</li>
+							<li>
+								<div class="field">
+									<span class="red">*</span>
+									<span class="field-name">微信号</span>					
+								</div>	
+								<input type="text" id="weixinID" class="ip-text user-weixin" placeholder="请输入微信号" />		
+							</li>
+						</ul>
+						<ul class="pay-ul">
+							<li>
+								<div class="field">
+									<span class="field-name">支付金额</span>					
+								</div>	
+								<div class="red pay-money">
+									￥1550元
+								</div>
+							</li>
+							<li>
+								<div class="field">
+									<span class="field-name">支付方式</span>					
+								</div>	
+								<img class="zfb" src="img/zfb.png"  />
+							</li>
+							<li>
+							</li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="payBtn" class="fixed-btn grey-bg">
+				<span class="ui-btn-loading-before" >去支付</span>
+				<span class="ui-btn-loading-after" style="display: none;">
+					<i class="ii-loading-gray-32x32"></i>
+					<span class="ui-btn-txt">处理中...</span>
+				</span>
+			</div>
+		</div>
+		<div id="unPayDialog" class="pop-dialog pt-page-moveFromTop" style="display: none;">
+			<div class="pop-con">
+				好可惜，名额已经满啦，<br>
+				下次早点报名哦  //(ㄒoㄒ)//
+			</div>
+			<div class="bt-list-bar">
+				<button class="a-dialog-cancle close" data-id="1" onclick="toBack();">确定</button>
+			</div>
+		</div>
+		<div class="pop-bg" style="display: none;"></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src='js/finish_info.js?temp=123456'></script>
+
+

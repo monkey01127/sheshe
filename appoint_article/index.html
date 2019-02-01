@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>约稿</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	</head>
+	<body onload="compareVersion();">
+		<img src="img/image_01.jpg"  alt="pic" />
+		<img src="img/image_02.jpg"  alt="pic" />
+		<img src="img/image_03.jpg"  alt="pic" />
+		<img src="img/image_04.jpg"  alt="pic" />
+		<input type="hidden" value="icon_share.jpg" id="shareImg" />
+	</body>
+</html>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/set_url.js"></script>
+<script>
+	var app_version = getParams("_version");
+	var current_version = '3.2.1';
+	
+	/*版本比较*/
+	function compareVersion(){
+		app_version = getVersionStr(app_version);
+		current_version = getVersionStr(current_version);
+		var compare_result = compareLength(app_version,current_version);
+		if(compare_result){
+			console.log("执行了。。。");
+			load();
+		}
+	}
+	
+	/*去除点点*/
+	function getVersionStr(version_str){
+		version_str = version_str.split('.');
+		version_str = version_str.join('');
+		return version_str;
+	}
+	
+	/*比较版本长度，比较短的加0*/
+	function compareLength(str1, str2) {
+		var compare_bool = false;
+		var str1_len = str1.length;
+		var str2_len = str2.length;
+		var space_len = str1_len - str2_len;
+		if(space_len > 0 ) {
+			str2 = str2 + addZero(space_len);
+		} else if(space_len < 0 ){
+			str1 = str1 + addZero(space_len);
+		}
+		var to_int1=parseInt(str1);
+		var to_int2=parseInt(str2);
+		if(to_int1 > to_int2){  
+			compare_bool = true;
+		}
+		return compare_bool;
+	}
+	
+	/*补0操作*/
+	function addZero(nums){
+		var zero_str='';
+		if(nums < 0){
+			nums = Math.abs(nums);
+		}
+	    for(var i=0;i<nums;i++){
+	    	zero_str = zero_str+'0';
+	    }
+	    return zero_str;
+	}
+	
+	function load(){
+		var parmsList={},data = {};
+		parmsList.share_img_url=img_url+$("#shareImg").val();
+		parmsList.title  = '不写不痛快的小伙伴！快来投稿啦！';
+		parmsList.content  = '要承包全宇宙LGBT群体兼职写手的团队向你发出招募令';
+		
+		data.info = parmsList;
+		linkIosAndAndrow(data);
+	}
+	
+	var u = navigator.userAgent;
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 alert('是否是Android：'+isAndroid); alert('是否是iOS：'+isiOS);
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端 
+	
+	/*和Ios ,and交互的接口函数*/
+	function linkIosAndAndrow(obj){
+		var json_str=JSON.stringify(obj);
+		if(isAndroid){	//安卓
+			window.contribute.onContributeCallback(json_str);
+		}else if(isiOS){ //ios
+			setTimeout(function(){
+				onScrollCallback(json_str);
+			},1000);
+		}
+	}
+	
+	/*页面路径获取参数信息*/
+	function getParams(key, defaultvalue) {
+		if (!window._params) {
+			window._params = [];
+			var query = document.location.href.split("?");
+			if (query.length > 1) {
+				query = query[1];
+				var paramItems = query.split("&");
+				console.log(paramItems);
+				for (var i = 0; i < paramItems.length; i++) {
+					var item = paramItems[i].split("=");
+					window._params[item[0]] = decodeURIComponent(item[1]);
+				}
+			}
+		}
+		return window._params[key] || defaultvalue;
+	}
+</script>
+

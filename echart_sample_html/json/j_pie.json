@@ -1,0 +1,50 @@
+{
+    "status": "0",
+    "error": "",
+    "data": {
+        "legend": {
+            "data": [
+                "一年到三年",
+                "三年到五年",
+                "五年到十年",
+                "十年以上",
+                "不到一年",
+                "记不清了"
+            ]
+        },
+        "color_type": "1",
+        "series": {
+            "data": [
+                {
+                    "value": 60,
+                    "percent": 30.5
+                },
+                {
+                    "value": 30,
+                    "percent": 15.5
+                },
+                {
+                    "value": 46,
+                    "percent": 23
+                },
+                {
+                    "value": 28,
+                    "percent": 14
+                },
+                {
+                    "value": 14,
+                    "percent": 7
+                },
+                {
+                    "value": 20,
+                    "percent": 10
+                }
+            ]
+        },
+        "title": {
+            "text": "您/您家的这辆{#Q2#}是什么时候购买的？",
+            "subtext": "您/您家的这辆{#Q2#}是什么时候购买的？",
+            "source": "基数: 所有被访者 n=8 \n\n数据来源：Q3.2"
+        }
+    }
+}

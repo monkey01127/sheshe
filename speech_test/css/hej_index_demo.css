@@ -1,0 +1,262 @@
+/*录音标题部分*/
+.record-title-list {
+	position: relative;
+	z-index: 1;
+}
+.record-title-list ul li {
+	position: absolute;
+	left: 0px;
+	top:0px;
+}
+.record-title-list ul li{
+	-webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1; 
+}
+.record-title-list ul li:nth-child(1){
+	-webkit-animation: fadeIn 2s ease 0.5s 1 both; 
+    -moz-animation: fadeIn 2s ease 0.5s 1 both;
+    animation: fadeIn 2s ease 0.5s 1 both; 
+}
+.record-title-list ul li:nth-child(2){
+	-webkit-animation: fadeIn 3s ease 1s 1 both; 
+    -moz-animation: fadeIn 3s ease 1s 1 both;
+    animation: fadeIn 3s ease 1s 1 both; 
+}
+.source-text {
+	-webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1; 
+	-webkit-animation: fadeIn 3s ease 1.5s 1 both; 
+    -moz-animation: fadeIn 3s ease 1.5s 1 both;
+    animation: fadeIn 3s ease 1.5s 1 both; 
+}
+
+/*原音正在播放按钮*/
+.patten-voice{
+	background: #40a1bf;
+	color:#fff;
+	height: 25px;
+    line-height: 25px;
+    width: 20%;
+    border-radius: 12.5px;
+    /* text-align: right; */
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    position: absolute;
+    padding-right: 5px;
+	width: 81px;
+	box-sizing: border-box;
+	text-align: right;
+	right: 15%;
+	bottom: 20%;
+	-moz-box-shadow: 3px 3px 3px #888888; /* 老的 Firefox */
+	box-shadow: 3px 3px 3px #888888;
+}
+
+.patten-voice .line-1 {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-top: -7px;
+    left: -3px;
+}
+
+.patten-voice .line {
+    position: absolute;
+    border: 2px solid transparent;
+    border-right: 2px solid #fff;
+    left: -2px;
+    top: 50%;
+    z-index: 999;
+}
+
+.patten-voice img {
+	display: inline;
+    left: 6px;
+    width: 9px;
+    position: absolute;
+    top: 6px;
+}
+
+.patten-voice .line-1 {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	margin-top: -5px;
+	left: 8.6px;
+}
+
+.patten-voice .line-2 {
+	width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-top: -7px;
+    left: 8.5px;
+}
+.onplaying {
+	background: #f12c3e;
+}
+
+.patten-voice.onplaying .line-1 {
+	-webkit-animation: voiceFading1 1s linear 0s infinite;
+	animation: voiceFading1 1s linear 0s infinite
+}
+
+.patten-voice.onplaying .line-2 {
+	-webkit-animation: voiceFading2 1s linear 0s infinite;
+	animation: voiceFading2 1s linear 0s infinite
+}
+
+@-webkit-keyframes voiceFading1 {
+	0% {
+		opacity: 0
+	}
+	35% {
+		opacity: 0
+	}
+	36% {
+		opacity: 1
+	}
+}
+
+@keyframes voiceFading1 {
+	0% {
+		opacity: 0
+	}
+	35% {
+		opacity: 0
+	}
+	36% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes voiceFading2 {
+	0% {
+		opacity: 0
+	}
+	69% {
+		opacity: 0
+	}
+	70% {
+		opacity: 1
+	}
+}
+
+@keyframes voiceFading2 {
+	0% {
+		opacity: 0
+	}
+	69% {
+		opacity: 0
+	}
+	70% {
+		opacity: 1
+	}
+}
+
+/*录音按钮部分*/
+.wrap-record-btn {
+	position: relative;
+}
+.wrap-btn {
+	width: 124px;
+	height: 155px;
+	margin: 30px auto;
+}
+.record-btn{
+	background: url(../img/icon_tips.png);
+	background-size: 100% 100%;
+}
+.on-record {
+	background: url(../img/icon_no_record.png);
+	background-size: 100% 100%;
+}
+.on-play{
+	background: url(../img/icon_play_on.png);
+	background-size: 100% 100%;
+}
+.no-pause {
+	background: url(../img/icon_pause_no.png);
+	background-size: 100% 100%;
+}
+
+.no-finish {
+	background: url(../img/icon_play_finish.png);
+	background-size: 100% 100%;
+}
+
+.btn-list .wrap-opet-btn {
+	width: 50%;
+	float: right;
+}
+
+.btn-list .wrap-opet-btn img {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.question {
+	/*margin-top: -25px;*/
+	position: relative;
+	/*z-index: -1;*/
+}
+
+.question .source-text {
+	width: 70%;
+	color: #406683;
+	margin: 0 auto;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -35%;
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.icon_record_opreate {
+	position: absolute;
+	width: 20%;
+	right: 15%;
+	bottom: 20%;
+}
+
+.wrap-pop .close-record {
+    right: 8%;
+    top: 38%;
+    position: absolute;
+}
+
+audio {
+	display: none;
+}
+
+/*打开微信按钮*/
+.open-wx {
+	display: block;
+    height: 155px;
+    width: 130px;
+    margin: 0 auto;
+    margin-top: -185px;
+    display: none; 
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+/*争对小屏幕手机*/
+@media only screen and (max-width: 320px){
+	.question .source-text{
+		width: 78%;
+		margin-left: -39%;
+		top:5px;
+		line-height: 1.8rem;
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (max-height: 480px) {
+	.wrap-btn {
+	    margin: 15px auto;
+	}
+}

@@ -1,0 +1,188 @@
+@keyframes warn {  
+    0% {  
+        transform: scale(0);  
+        opacity: 0.0;  
+    } 
+    25% {  
+        transform: scale(0.05);  
+        opacity: 0.1;  
+    }  
+    50% {  
+        transform: scale(0.1);  
+        opacity: 0.3;  
+    }  
+    75% {  
+        transform: scale(0.5);  
+        opacity: 0.5;  
+    }  
+    100% {  
+        transform: scale(1);  
+        opacity: 1;  
+    }  
+}
+.small-circle {
+/*	-webkit-animation: warn 1s ease-out;  
+    -moz-animation: warn 1s ease-out;  
+    animation: warn 1s ease-out;  
+    -webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1;  */
+}
+.middle-circle{
+	-webkit-animation: warn 0.6s ease-out;  
+    -moz-animation: warn 0.6s ease-out;  
+    animation: warn 0.6s ease-out;  
+    -webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1;  
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.text-words {
+	-webkit-animation: warn 1s ease 1s 1 both; 
+    -moz-animation: warn 1s ease 1s 1 both;
+    animation: warn 1s ease 1s 1 both; 
+    -webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1;  
+}
+.icon_microphone {
+	-webkit-animation: bounceInUp 1s ease 1s 1 both; 
+    -moz-animation: bounceInUp 1s ease 1s 1 both;
+    animation: bounceInUp 1s ease 1s 1 both; 
+    -webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1; 
+}
+.prize-list ul li{
+	-webkit-animation-iteration-count: 1;  
+    -moz-animation-iteration-count: 1;  
+    animation-iteration-count: 1; 
+}
+.prize-list ul li:nth-child(1){
+	-webkit-animation: bounceInDown 2s ease 1.5s 1 both; 
+    -moz-animation: bounceInDown 2s ease 1.5s 1 both;
+    animation: bounceInDown 2s ease 1.5s 1 both; 
+}
+.prize-list ul li:nth-child(2){
+	-webkit-animation: bounceInDown 2.5s ease 1.5s 1 both; 
+    -moz-animation: bounceInDown 2.5s ease 1.5s 1 both;
+    animation: bounceInDown 2.5s ease 1.5s 1 both; 
+}
+.prize-list ul li:nth-child(3){
+	-webkit-animation: bounceInDown 3s ease 1.5s 1 both; 
+    -moz-animation: bounceInDown 3s ease 1.5s 1 both;
+    animation: bounceInDown 3s ease 1.5s 1 both; 
+}
+.prize-list ul li:nth-child(4){
+	-webkit-animation: bounceInDown 4s ease 1.5s 1 both; 
+    -moz-animation: bounceInDown 4s ease 1.5s 1 both;
+    animation: bounceInDown 4s ease 1.5s 1 both; 
+}
+/*.icon_light{
+	-webkit-animation: rotateIn 6s linear infinite;
+	 -moz-animation: rotateIn 6s linear infinite;
+    animation: rotateIn 6s linear infinite; 
+}*/
+    
+
+.big-circle,
+.small-circle,
+.middle-circle,
+.text-words,
+.icon_microphone,
+.icon_light {
+	position: absolute;
+}
+
+.big_circle {
+	z-index: 0;
+}
+
+.middle-circle {
+	z-index: 1;
+}
+
+.small-circle {
+	z-index: 2;
+}
+
+.icon_light {
+	z-index: 3;
+}
+
+.icon_microphone {
+	z-index: 4;
+}
+
+.text-words {
+	z-index: 5;
+}
+.win60.mAuto.mt10{
+	margin-top: 10px;
+}
+
+/*奖品列表*/
+
+.wrap-con {
+	position: relative;
+}
+
+.prize-list {
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+}
+
+.prize-list ul {
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.prize-list li {
+	width: 25%;
+	/* margin-top: -35%;*/
+	float: left;
+	padding-top: 10px;
+}
+
+.icon_ribbon {
+	margin-top: -6%;
+}
+
+.a-rules {
+	text-decoration: underline;
+	color: #fff;
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	position: absolute;
+	bottom: 7%;
+	font-size: 1rem;
+}
+
+@media screen and (max-height: 550px) {
+	.a-rules {
+		position: static;
+		margin: 30px 0;
+	}
+}

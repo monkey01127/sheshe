@@ -1,0 +1,72 @@
+{
+	"status": 0,
+	"error": "",
+	"data": {
+		"title": {
+			"text": "品牌知晓度",
+			"subtext": "%",
+			"source": "基数: 所有被访者 n=400 \n\n数据来源：B12"
+		},
+		"legend": {
+		},
+		"xAxis": {
+			"max": 100
+		},
+		"yAxis": {
+			"data": [
+				"三星应用商店",
+				"PP助手",
+				"安智市场",
+				"华为应用市场",
+				"小米应用商店",
+				"豌豆荚",
+				"安卓市场",
+				"百度手机助手",
+				"应用宝",
+				"360手机助手"
+			]
+		},
+		"series": [{
+			"data": [{
+				"value":17,
+				"percent":80
+			},
+				{
+				"value":27,
+				"percent":80
+			},{
+				"value":37,
+				"percent":80
+			},
+				{
+				"value":47,
+				"percent":50
+			},
+				{
+				"value":57,
+				"percent":30
+			},
+				{
+				"value":67,
+				"percent":50
+			},
+				{
+				"value":77,
+				"percent":30
+			},
+				{
+				"value":87,
+				"percent":60
+			},
+				{
+				"value":97,
+				"percent":30
+			},
+				{
+				"value":100,
+				"percent":30
+			}
+			]
+		}]
+	}
+}
